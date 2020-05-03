@@ -1,0 +1,171 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    background: black;
+    color:white;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.opaque {
+    opacity: 0.4;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(49, 49, 49);
+    outline: 1px solid slategrey;
+    border-radius: 20px;
+  }
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0 0;
+    position: relative;
+}
+
+.logo {
+    width: 180px;
+    height: 70px;
+    background-image: url('/dist/images/logo_text.png');
+    background-size: cover;
+}
+
+.toggle-menu,.toggle-icon {
+    position: absolute;
+    left:30px;
+    top:0;
+    cursor: pointer;
+}
+
+.toggle-menu {
+    transition: left 0.5s;
+    z-index:3;
+    list-style-type: none;
+    left: -70px;
+    opacity: 1 !important;
+}
+
+.toggle-item {
+    width: 80px;
+    height:30px;
+    position: relative;
+}
+
+.toggle-item a {
+    text-decoration: none;
+    height:100px;
+    width:80px;
+    font-size: 20px;
+}
+
+.toggle-icon, .toggle-icon-menu {
+    font-size: 40px;
+    height: 60px;
+}
+
+.menu-visible {
+    left: 30px;
+}
+
+.non-header, .logo {
+    transition: opacity 1s;
+
+}
+
+.hook {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#trailer {
+    width: 90vw;
+}
+
+.statistics {
+    margin-bottom: 100px;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:0;
+    letter-spacing: 1px;
+    position: relative;
+    width: 100vw;
+}
+
+.statistics div {
+    margin: 20px auto;
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;;
+    width: 33%;
+}
+
+@media screen and (max-width: 750px) {
+    .statistics div {
+        width: 80%;
+    }
+}
+
+.icon {
+    width: 100%;
+}
+
+.icon img {
+    height: 60px;
+}
+
+.label {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+.label::after {
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height:2px;
+    background: white;
+    content:"";
+    transition: width 1s;
+}
+
+.label:hover:after {
+    width: 50%;
+
+}
+

@@ -2,7 +2,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0;
     margin:0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background: black;
     color:white;
 }
@@ -67,8 +67,10 @@ body::-webkit-scrollbar {
     transition: left 0.5s;
     z-index:3;
     list-style-type: none;
-    left: -70px;
+    left: -81px;
     opacity: 1 !important;
+    height: 100vh;
+
 }
 
 .toggle-item {
@@ -90,7 +92,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-visible {
-    left: 30px;
+    left: 17px;
 }
 
 .non-header, .logo {
@@ -108,6 +110,7 @@ body::-webkit-scrollbar {
 
 #trailer {
     width: 90vw;
+    object-fit: cover;
 }
 
 .statistics {
